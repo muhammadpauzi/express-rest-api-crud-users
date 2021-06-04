@@ -1,0 +1,16 @@
+{
+  "name": "express-rest-api-crud-users",
+  "version": "1.0.0",
+  "description": "REST API for CRUD data users.",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "author": "Muhammad Pauzi",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-validator": "^6.11.1",
+    "nodemon": "^2.0.7"
+  }
+}
