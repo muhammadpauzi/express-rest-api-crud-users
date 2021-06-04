@@ -1,5 +1,13 @@
 # API SPEC
 
+## Authentication
+
+All API must use this authentication
+
+Request :
+- Header :
+    - X-Api-Key: 'api_key'
+
 ## Create User
 
 Request :
@@ -12,23 +20,31 @@ Request :
 - Body : 
 ```json
     {
-        "id": "string, unique",
         "name": "string",
         "email": "string"
     }
 ```
 
-Response :
+Response Success :
 ```json
     {
         "code": "number",
         "status": "string",
-        "body": {
+        "data": {
             "id": "string, unique",
             "name": "string",
             "email": "string",
             "created_at": "date"
         }
+    }
+```
+
+Response Error :
+```json
+    {
+        "code": "number",
+        "status": "string",
+        "message": "string"
     }
 ```
 
@@ -40,17 +56,26 @@ Request :
 - Header : 
     - Accept: application/json
 
-Response :
+Response Success :
 ```json
     {
         "code": "number",
         "status": "string",
-        "body": {
+        "data": {
             "id": "string, unique",
             "name": "string",
             "email": "string",
             "created_at": "date"
         }
+    }
+```
+
+Response Error :
+```json
+    {
+        "code": "number",
+        "status": "string",
+        "message": "string"
     }
 ```
 
@@ -76,7 +101,7 @@ Response :
     {
         "code": "number",
         "status": "string",
-        "body": {
+        "data": {
             "id": "string, unique",
             "name": "string",
             "email": "string",
@@ -87,8 +112,6 @@ Response :
 ```
 
 ## List Users
-
-## Update User
 
 Request :
 - Method : GET
@@ -104,7 +127,7 @@ Response :
     {
         "code": "number",
         "status": "string",
-        "body": [
+        "data": [
             {
                 "id": "string, unique",
                 "name": "string",

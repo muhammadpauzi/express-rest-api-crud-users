@@ -1,0 +1,82 @@
+@baseURL = http://localhost:3000/api/users
+@randomUnique = {{$randomInt 1 1000}}
+
+# List users
+# GET {{baseURL}}
+# X-Api-Key: SECRET_KEY
+# Accept: application/json
+
+# List users with size parameter
+# GET {{baseURL}}?size=5
+# X-Api-Key: SECRET_KEY
+# Accept: application/json
+
+# List users with page and size parameter
+# GET {{baseURL}}?page=2&size=4
+# X-Api-Key: SECRET_KEY
+# Accept: application/json
+
+# Get User
+# GET {{baseURL}}/3ea8d4e4-accd-4657-ac69-e952a1dfe229
+# X-Api-Key: SECRET_KEY
+# Accept: application/json
+
+# Get User Not Found
+# GET {{baseURL}}/SALAH
+# X-Api-Key: SECRET_KEY
+# Accept: application/json
+
+# Create User
+# POST {{baseURL}}
+# X-Api-Key: SECRET_KEY
+# Content-Type: application/json
+# Accept: application/json
+
+# {
+#     "name": "Unknown {{randomUnique}}",
+#     "email": "unknown{{randomUnique}}@gmail.com"
+# }
+
+# Create user not valid
+# POST {{baseURL}}
+# X-Api-Key: SECRET_KEY
+# Content-Type: application/json
+# Accept: application/json
+
+# {
+#     "name": "",
+#     "email": "example@"
+# }
+
+# Not Valid As well
+# POST {{baseURL}}
+# X-Api-Key: SECRET_KEY
+# Content-Type: application/json
+# Accept: application/json
+
+# {
+#     "name": "",
+#     "email": "mhdpauzi@gmail.com"
+# }
+
+# Update user
+# PUT {{baseURL}}/3ea8d4e4-accd-4657-ac69-e952a1dfe229
+# X-Api-Key: SECRET_KEY
+# Content-Type: application/json
+# Accept: application/json
+
+# {
+#     "name": "Muhammad Pauzi",
+#     "email": "mhdpauzi@gmail.com"
+# }
+
+# Update user Not Valid
+# PUT {{baseURL}}/3ea8d4e4-accd-4657-ac69-e952a1dfe229
+# X-Api-Key: SECRET_KEY
+# Content-Type: application/json
+# Accept: application/json
+
+# {
+#     "name": "Muhammad Pauzi",
+#     "email": "mhdsukri@gmail.com"
+# }
