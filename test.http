@@ -12,7 +12,7 @@
 # Accept: application/json
 
 # List users with page and size parameter
-# GET {{baseURL}}?page=2&size=4
+# GET {{baseURL}}?page=6&size=2
 # X-Api-Key: SECRET_KEY
 # Accept: application/json
 
@@ -31,6 +31,11 @@
 # X-Api-Key: SECRET_KEY
 # Content-Type: application/json
 # Accept: application/json
+
+# {
+#     "name": "Muhammad Ilham",
+#     "email": "mhdilham@gmail.com"
+# }
 
 # {
 #     "name": "Unknown {{randomUnique}}",

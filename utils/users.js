@@ -26,11 +26,7 @@ const loadUsers = () => {
 
 const find = (page, size) => {
     const users = loadUsers();
-    if (page === 1) {
-        return users.filter((user, i) => i < size);
-    } else {
-        return users.filter((user, i) => i >= size && i < (size * page));
-    }
+    return users.filter((user, i) => i >= ((size * page) - size) && i < size * page)
 }
 
 const findById = id => {
